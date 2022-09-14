@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.grandmotherbox{
+    min-height: 100vh;
+    background-color: #cc7358;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.motherbox{
+    transition: 0.3s;
+    margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.check{
+    cursor: pointer;
+    position: absolute;
+    margin-left: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 1.5rem;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.ShapeKP{
+    display:flex;    
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.3rem;
+}
+
+.shape{
+    width: 0.5rem;
+    height: 0.25rem;
+    border-radius: 2px;
+    padding :0 0.5rem;
+    background-color: rgb(63, 62, 62);
+}
+
+
+.shape1{
+    margin-bottom:0.5rem ;
+    
+}
+
+.menu{
+
+    font-weight: 600;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:rgb(75, 74, 72);
+    background-color: #fff;
+
+}
+.check:checked  ~ .motherbox{
+    border-radius: 60px;
+    width: 31rem;
+    transition: 0.4s;
+
+}
+
+.menu>li{
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+.menu>li:hover{
+    color: #161818;
+}
+.check:checked ~ .motherbox .ShapeKP .shape {
+   background-color: tomato;
+   transition: 0.5s;
+}
+.check:checked ~ .motherbox .ShapeKP .shape1 {
+        transform: translateY(6px) rotate(45deg);
+       
+}
+.check:checked ~ .motherbox .ShapeKP .shape2 {
+    transform: translateY(-6px) rotate(-45deg);
+    
+}
